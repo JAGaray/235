@@ -1,69 +1,60 @@
 #include "Vector.h"
 
-class Vector {
-public:
-	Vector(unsigned int capacity = DEFAULT_CAPACITY) {
+
+	Vector::Vector(unsigned int capacity = DEFAULT_CAPACITY) {
     capacity_ = capacity;
   }
-	~Vector() {
+	Vector::~Vector() {
     delete arr_;
   }
-	Vector(const Vector& rhs) {
+	Vector::Vector(const Vector& rhs) {
     arr_ = rhs.arr_;
     capacity_ = rhs.capacity_;
     size_ = rhs.size;
   }
-	Vector& operator=(const Vector& rhs) {
+	Vector& Vector::operator=(const Vector& rhs) {
     arr_ = rhs.arr_;
     capacity_ = rhs.capacity_;
     size_ = rhs.size_;
   }
 
-	unsigned int capacity() {
+	unsigned int Vector::capacity() {
     return capacity_;
   }
-	unsigned int size() {
+	unsigned int Vector::size() {
     return size_;
   }
-	bool empty() {
+	bool Vector::empty() {
     return size == 0;
   }
 
-	void push_back(const int& data) {
+	void Vector::push_back(const int& data) {
     arr_[size_] = data;
   }
-	bool remove(const int& data) {
+	bool Vector::remove(const int& data) {
     for (int i = 0; i < size_; i++)
       if (arr_[i] == data)
         arr_[i] = null;
   }
 
-	void clear() {
+	void Vector::clear() {
     delete arr_;
     size_ = 0;
     capacity_ = DEFAULT_CAPACITY;
   }
 
-	int& operator[](unsigned int pos) {
+	int& Vector::operator[](unsigned int pos) {
     return arr_[pos];
   }
 
-	bool at(unsigned int pos, int& data) const {
+	bool Vector::at(unsigned int pos, int& data) const {
     if (pos <= capacity_)
       return true;
     return false;
   }
 
 
-private:
-	int* arr_;
-	unsigned int size_;
-	unsigned int capacity_;
 
-	static const unsigned int DEFAULT_CAPACITY = 3;
-
-	void resize(unsigned int capacity) {
+	void Vector::resize(unsigned int capacity) {
 
   }
-
-};
