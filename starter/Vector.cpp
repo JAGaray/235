@@ -16,9 +16,10 @@
     arr_ = rhs.arr_;
     capacity_ = rhs.capacity_;
     size_ = rhs.size_;
+    return this;
   }
 
-	unsigned int Vector::capacity() {
+	unsigned int Vector::capacity() const {
     return capacity_;
   }
 	unsigned int Vector::size() {
