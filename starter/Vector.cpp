@@ -52,9 +52,10 @@
   }
 
 	bool Vector::at(unsigned int pos, int& data) const {
-    if (pos <= capacity_)
-      return true;
-    return false;
+    if (pos > capacity_)
+      return false;
+    data = arr_[pos];
+    return true;
   }
 
 
