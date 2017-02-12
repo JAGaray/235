@@ -16,23 +16,23 @@
     arr_ = rhs.arr_;
     capacity_ = rhs.capacity_;
     size_ = rhs.size_;
-    return this;
+    return rhs;
   }
 
 	unsigned int Vector::capacity() const {
     return capacity_;
   }
-	unsigned int Vector::size() {
+	unsigned int Vector::size() const {
     return size_;
   }
-	bool Vector::empty() {
+	bool Vector::empty() const {
     return size == 0;
   }
 
 	void Vector::push_back(const int& data) {
     arr_[size_] = data;
   }
-	bool Vector::remove(const int& data) {
+	bool Vector::remove(const int& data) const {
     for (unsigned i = 0; i < size_; i++)
       if (arr_[i] == data)
         arr_[i] = null;
