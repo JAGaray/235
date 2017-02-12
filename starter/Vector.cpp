@@ -10,7 +10,7 @@
 	Vector::Vector(const Vector& rhs) {
     arr_ = rhs.arr_;
     capacity_ = rhs.capacity_;
-    size_ = rhs.size;
+    size_ = rhs.size_;
   }
 	Vector& Vector::operator=(const Vector& rhs) {
     arr_ = rhs.arr_;
@@ -26,7 +26,7 @@
     return size_;
   }
 	bool Vector::empty() const {
-    return (size == 0);
+    return (size_ == 0);
   }
 
 	void Vector::push_back(const int& data) {
