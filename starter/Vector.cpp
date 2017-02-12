@@ -26,13 +26,13 @@
     return size_;
   }
 	bool Vector::empty() const {
-    return size == 0;
+    return (size == 0);
   }
 
 	void Vector::push_back(const int& data) {
     arr_[size_] = data;
   }
-	bool Vector::remove(const int& data) const {
+	bool Vector::remove(const int& data) {
     for (unsigned i = 0; i < size_; i++)
       if (arr_[i] == data)
         arr_[i] = null;
