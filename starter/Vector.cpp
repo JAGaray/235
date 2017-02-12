@@ -13,7 +13,10 @@
     size_ = rhs.size_;
   }
 	Vector& Vector::operator=(const Vector& rhs) {
-    return new Vector::Vector(rhs);
+    arr_ = rhs.arr_;
+    capacity_ = rhs.capacity_;
+    size_ = rhs.size_;
+    return *this;
   }
 
 	unsigned int Vector::capacity() const {
@@ -32,7 +35,7 @@
 	bool Vector::remove(const int& data) {
     for (unsigned i = 0; i < size_; i++)
       if (arr_[i] == data)
-        arr_[i] = std::null;
+        arr_[i] = 0;
     return false;
   }
 
