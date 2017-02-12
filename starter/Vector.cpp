@@ -32,6 +32,7 @@
 
 	void Vector::push_back(const int& data) {
     arr_[size_] = data;
+    size_++;
   }
 	bool Vector::remove(const int& data) {
     for (unsigned i = 0; i < size_; i++)
