@@ -3,6 +3,7 @@
 
 	Vector::Vector(unsigned int capacity) {
     capacity_ = capacity;
+    size_=0;
   }
 	Vector::~Vector() {
     delete arr_;
