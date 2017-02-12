@@ -1,7 +1,7 @@
 #include "Vector.h"
 
 
-	Vector::Vector(unsigned int capacity = DEFAULT_CAPACITY) {
+	Vector::Vector(unsigned int capacity) {
     capacity_ = capacity;
   }
 	Vector::~Vector() {
@@ -32,9 +32,10 @@
     arr_[size_] = data;
   }
 	bool Vector::remove(const int& data) {
-    for (int i = 0; i < size_; i++)
+    for (unsigned i = 0; i < size_; i++)
       if (arr_[i] == data)
         arr_[i] = null;
+    return false;
   }
 
 	void Vector::clear() {
