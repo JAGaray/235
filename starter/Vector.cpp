@@ -7,7 +7,6 @@
     size_=0;
   }
 	Vector::~Vector() {
-    delete [] arr_;
   }
 	Vector::Vector(const Vector& rhs) {
     arr_ = rhs.arr_;
@@ -55,6 +54,7 @@
     delete arr_;
     size_ = 0;
     capacity_ = DEFAULT_CAPACITY;
+		resize(capacity_);
   }
 
 	int& Vector::operator[](unsigned int pos) {
@@ -73,7 +73,7 @@
 	void Vector::resize(unsigned int capacity) {
 		capacity_ = capacity;
 		int* temp = new int[capacity_];
-		for(unsigned i; i < size_; i++){
+		for(unsigned i = 0; i < size_; i++){
 			temp[i] = arr_[i];
 		}
 		delete arr_;
