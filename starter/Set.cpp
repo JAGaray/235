@@ -15,6 +15,7 @@
 				if (data == temp_data)
 					return true;
 		}
+		return false;
   };
 
 	bool Set::insert(const int& data) {
@@ -24,7 +25,7 @@
 		return true;
   };
 	bool Set::remove(const int& data) {
-    return false;
+    vector_.remove(data);
   };
 
 	void Set::clear() {
