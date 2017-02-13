@@ -33,6 +33,8 @@
 	void Vector::push_back(const int& data) {
     arr_[size_] = data;
     size_++;
+		if (size_ = capacity_)
+		capacity_ *= 2;
   }
 	bool Vector::remove(const int& data) {
 		bool shift = false;
