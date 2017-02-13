@@ -5,7 +5,7 @@
   };
 
 	bool Set::empty() const {
-    return true;
+		return vector_.empty();
   };
 
 	bool Set::contains(const int& data) const {
@@ -25,9 +25,9 @@
 		return true;
   };
 	bool Set::remove(const int& data) {
-    return false;
+    return vector_.remove(data);
   };
 
 	void Set::clear() {
-
+		vector_.clear();
   };
