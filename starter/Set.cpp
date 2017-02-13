@@ -13,6 +13,10 @@
   };
 
 	bool Set::insert(const int& data) {
+		for (unsigned i = 0; i < vector_.size(); i++) {
+			if (vector_[i] == data)
+				return false;
+		}
 		vector_.push_back(data);
 		return true;
   };
