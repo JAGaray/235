@@ -4,8 +4,6 @@
     return vector_.size();
   };
 
-	Set::~Set() {}
-
 	bool Set::empty() const {
 		return vector_.empty();
   };
