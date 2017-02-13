@@ -7,7 +7,6 @@
     size_=0;
   }
 	Vector::~Vector() {
-		if(size_ > 0)
 			delete arr_;
   }
 	Vector::Vector(const Vector& rhs) {
