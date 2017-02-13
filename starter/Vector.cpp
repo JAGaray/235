@@ -33,13 +33,7 @@
 
 	void Vector::push_back(const int& data) {
 		if(size_ == capacity_){
-			int* temp = new int[capacity_ * 2];
-			for(unsigned i; i < size_; i++){
-				temp[i] = arr_[i];
-			}
-		delete arr_;
-		capacity_ *= 2;
-		arr_ = temp;
+			resize(capacity_*2);
 		}
     arr_[size_] = data;
     size_++;
@@ -77,5 +71,11 @@
 
 
 	void Vector::resize(unsigned int capacity) {
-
+		capacity_ = capacity;
+		int* temp = new int[capacity_];
+		for(unsigned i; i < size_; i++){
+			temp[i] = arr_[i];
+		}
+		delete arr_;
+		arr_ = temp;
   }
