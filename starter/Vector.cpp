@@ -11,14 +11,20 @@
 			delete arr_;
   }
 	Vector::Vector(const Vector& rhs) {
-    arr_ = rhs.arr_;
     capacity_ = rhs.capacity_;
     size_ = rhs.size_;
+		arr_ = new int[capacity_];
+		for(unsigned i = 0; i < rhs.size_; i++){
+			arr_[i] = rhs.arr_[i];
+		}
   }
 	Vector& Vector::operator=(const Vector& rhs) {
-    arr_ = rhs.arr_;
     capacity_ = rhs.capacity_;
     size_ = rhs.size_;
+		arr_ = new int[capacity_];
+		for(unsigned i = 0; i < rhs.size_; i++){
+			arr_[i] = rhs.arr_[i];
+		}
     return *this;
   }
 
