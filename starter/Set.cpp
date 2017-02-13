@@ -3,6 +3,7 @@
 	unsigned int Set::size() const {
     return 0;
   };
+
 	bool Set::empty() const {
     return true;
   };
@@ -12,7 +13,8 @@
   };
 
 	bool Set::insert(const int& data) {
-    return true;
+		vector_.push_back(data);
+		return true;
   };
 	bool Set::remove(const int& data) {
     return false;
