@@ -37,7 +37,7 @@
 	bool Vector::remove(const int& data) {
 		bool shift = false;
 		for (unsigned i = 0; i < size_; i++) {
-			if (shift)
+			if (shift && i < (size_ - 1))
 				arr_[i-1] = arr_[i];
 			if (arr_[i] == data)
 				shift = true;
