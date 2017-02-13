@@ -38,6 +38,7 @@
     for (unsigned i = 0; i < size_; i++)
       if (arr_[i] == data) {
         arr_[i] = 0;
+				size_--;
 				return true;
 			}
     return false;
