@@ -52,9 +52,8 @@
 
 	void Vector::clear() {
     delete arr_;
+		resize(DEFAULT_CAPACITY);
     size_ = 0;
-    capacity_ = DEFAULT_CAPACITY;
-		resize(capacity_);
   }
 
 	int& Vector::operator[](unsigned int pos) {
