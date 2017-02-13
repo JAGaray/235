@@ -3,6 +3,7 @@
 
 	Vector::Vector(unsigned int capacity) {
     capacity_ = capacity;
+		arr_ = new int[capacity_];
     size_=0;
   }
 	Vector::~Vector() {
@@ -33,8 +34,10 @@
 	void Vector::push_back(const int& data) {
     arr_[size_] = data;
     size_++;
-		if (size_ == capacity_)
-		capacity_ *= 2;
+		if (size_ == capacity_){
+			capacity_ *= 2;
+			
+		}
   }
 	bool Vector::remove(const int& data) {
 		bool shift = false;
