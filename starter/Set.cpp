@@ -9,9 +9,11 @@
   };
 
 	bool Set::contains(const int& data) const {
+		int temp_data;
 		for (unsigned i = 0; i < vector_.size(); i++) {
-			if (vector_[i] == data)
-				return true;
+			if (vector_.at(i, temp_data))
+				if (data == temp_data)
+					return true;
 		}
   };
 
