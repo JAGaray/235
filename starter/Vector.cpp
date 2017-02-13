@@ -35,13 +35,17 @@
     size_++;
   }
 	bool Vector::remove(const int& data) {
-    for (unsigned i = 0; i < size_; i++)
-      if (arr_[i] == data) {
-        arr_[i] = 0;
-				size_--;
-				return true;
+		bool shift;
+		for (unsigned i = 0; i < size_; i++) {
+      if (arr_[i] == data)
+				shift = true;
+			if (shift) {
+				arr_[i-1] = arr_[i];
 			}
-    return false;
+		}
+		if (shift) 
+			size_--;
+    return shift;
   }
 
 	void Vector::clear() {
