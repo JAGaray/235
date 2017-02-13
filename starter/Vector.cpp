@@ -36,8 +36,10 @@
   }
 	bool Vector::remove(const int& data) {
     for (unsigned i = 0; i < size_; i++)
-      if (arr_[i] == data)
+      if (arr_[i] == data) {
         arr_[i] = 0;
+				return true;
+			}
     return false;
   }
 

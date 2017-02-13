@@ -16,21 +16,21 @@ int main() {
 	//Testing Push Back
 	aVec.push_back(5);
 	aVec.push_back(3);
-	
+
 	assert(aVec.size() == 2);
 	assert(!aVec.empty());
 
 	//Testing accessors
 	assert(aVec[0] == 5);
-	
-	int data; 
+
+	int data;
 	assert(aVec.at(0, data));
 	assert(data == 5);
 
 	assert(aVec.at(3, data) == false);
 	assert(aVec.at(-1, data) == false);
 
-	//Testing Copy & Assignment 
+	//Testing Copy & Assignment
 	Vector vectorB(aVec);
 	Vector vectorC;
 	vectorC = vectorB;
@@ -94,4 +94,3 @@ int main() {
 
 	return 0;
 }
-
