@@ -25,7 +25,7 @@
 		return true;
   };
 	bool Set::remove(const int& data) {
-    vector_.remove(data);
+    return vector_.remove(data);
   };
 
 	void Set::clear() {
