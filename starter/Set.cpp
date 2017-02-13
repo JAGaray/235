@@ -4,7 +4,7 @@
     return 0;
   };
 	bool Set::empty() const {
-    return false;
+    return true;
   };
 
 	bool Set::contains(const int& data) const {
@@ -19,5 +19,5 @@
   };
 
 	void Set::clear() {
-  
+
   };
