@@ -12,7 +12,7 @@
   };
 
 	bool Set::insert(const int& data) {
-    return false;
+    return true;
   };
 	bool Set::remove(const int& data) {
     return false;
