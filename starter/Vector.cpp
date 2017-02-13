@@ -7,7 +7,7 @@
     size_=0;
   }
 	Vector::~Vector() {
-    delete arr_;
+    delete [] arr_;
   }
 	Vector::Vector(const Vector& rhs) {
     arr_ = rhs.arr_;
@@ -36,7 +36,7 @@
     size_++;
 		if (size_ == capacity_){
 			capacity_ *= 2;
-			
+
 		}
   }
 	bool Vector::remove(const int& data) {
