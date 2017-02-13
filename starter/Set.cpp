@@ -1,7 +1,7 @@
 #include "Set.h"
 
 	unsigned int Set::size() const {
-    return 0;
+    return vector_.size();
   };
 
 	bool Set::empty() const {
